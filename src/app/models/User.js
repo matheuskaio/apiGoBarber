@@ -25,7 +25,7 @@ class User extends Model {
 
   static associate(models) {
     // o belongsTo diz que a teremos uma chave estrangeira de FILE em USER
-    this.belongsTo(models.File, { foreignKey: 'avatar_id' });
+    this.belongsTo(models.File, { foreignKey: 'avatar_id', as: 'avatar' });
   }
 
   checkPassword(password) {
